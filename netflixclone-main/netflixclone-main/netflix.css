@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+.header {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0.7)), url(header-image.png);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+nav button {
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: white;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.eng {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid;
+    padding: 7px 10px;
+
+}
+
+.eng img {
+    width: 10px;
+    margin-left: 10px;
+}
+
+.headc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 100px;
+
+}
+
+.headc h1 {
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
+
+}
+
+.headc h3 {
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.email {
+    background: white;
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    margin-top: 30px;
+    overflow: hidden;
+
+}
+
+.email input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+
+}
+
+.email button {
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+
+}
+
+.njoy {
+    padding: 50px 12%;
+    font-size: 22px;
+
+}
+
+.tv {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.text {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.jpj {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.tv img {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+.faq {
+    text-align: center;
+    font-size: 18px;
+}
+
+.accordion {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+    font-weight: 500;
+}
+
+.accordion label {
+    background: #303030;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+label::after {
+    content: "+";
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.accordion .content {
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked+label+.content {
+    max-height: 600px;
+    padding: 30px 20px;
+
+}
+
+.accordion input[type="radio"]:checked+label::after {
+    transform: rotate(135deg);
+}
+
+small {
+    text-align: center;
+}
+
+.faq .email {
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+.footer {
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+}
+
+.footer h2 {
+    font-size: 18px;
+    font-weight: 500px;
+    margin-bottom: 35px;
+}
+
+.footer .col {
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+}
+
+.footer .col a {
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer button {
+    color: #fff;
+}
+
+.copy p {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+@media only screen and (max-width:600px) {
+    .logo {
+        width: 100px;
+    }
+
+    nav button {
+        padding: 5px 10px;
+
+    }
+
+    .headc {
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+
+    }
+
+    .headc h1 {
+        font-size: 30px;
+    }
+
+    .jpj,
+    .text {
+        flex-basis: 100%;
+
+
+    }
+
+    .text h2 {
+        font-size: 25px;
+    }
+
+    .text p {
+        font-size: 15px;
+    }
+
+    .row {
+        display: grid;
+    }
+}
